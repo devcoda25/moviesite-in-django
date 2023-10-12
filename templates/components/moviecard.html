@@ -1,0 +1,18 @@
+
+{% for movie in movies %}
+<a href="{% url 'movie_view' movie_id=movie.id %}">
+<div class="text-white  space-y-24 flex-col gap-4 px-4 mx-auto mt-4 ">
+    <div class="h-[200px] w-[200px] object-cover ">
+        <img class="w-full h-[300px] border   border-white " src="{{movie.large_cover_image }}"  alt="poster"/>
+    </div>
+    <div class=" mt-4">
+        <h2>{{ movie.title|truncatechars:20 }}</h2>
+        <h2>{{ movie.year }}</h2>
+    </div>
+
+
+    
+</div>
+</a>
+
+{% endfor %}

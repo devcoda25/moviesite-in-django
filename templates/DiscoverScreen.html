@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-white mt-4 mx-4 flex flex-wrap ">
+    <div class=" grid-cols-4 flex  flex-wrap ">
+        {% include "components/moviescard.html" %}
+    </div>
+   
+
+<div class=" justify-center items-center mx-auto pagination flex text-green-700">
+    {% if page_obj.has_previous %}
+        <button class=" bg-green-400 h-[50px] w-[100px]" href="?page={{ page_obj.previous_page_number }}">Previous</button>
+    {% endif %}
+    <span>{{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+    {% if page_obj.has_next %}
+        <button  class=" bg-green-400 h-[50px] w-[100px]" href="?page={{ page_obj.next_page_number }}">Next</button>
+    {% endif %}
+</div>
+
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mt-4 text-white flex-col space-y-4 ">
+    <div class=" mx-[100px] items-center " >
+        <h1 class="text-3xl mx-[100px] items-center justify-center">
+            Download Movies : HD smallest size
+        </h1>
+        <h3 class="text-1xl items-center justify-center">
+            Welcome to the official YTS.MX website. 
+            Here you can browse and download YIFY movies in excellent 720p, 1080p, 2160p 4K and 3D quality, all at the smallest file size. YTS Movies Torrents.
+        </h3>
+    </div>
+    <div class="flex-col  ">
+        <div class="flex space-x-10 items-center justify-center ">
+            <h3 class="text-center text-2xl"> Upcoming movies</h3>
+            <a  class='hover:text-white' href="{% url 'discover' %}"><h3 class="text-right font-semibold text-green-400"> Discover</h3></a>
+          
+        </div>
+
+        <div class='flex'>
+            {% include "components/moviecard.html" %}
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+{% endblock content %}

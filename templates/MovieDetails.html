@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mt-4 mx-auto  object-cover bg-hero bg-no-repeat bg-cover bg-center bg-fixed h-[600px] w-full space-x-4 justify-center flex text-white" style="background-image: url('{{ movie_details.data.movie.background_image_original }}');">
+    <div class="h-[400px] w-[500px] object-cover">
+        <img class=" ml-2" src="{{ movie_details.data.movie.large_cover_image }}" alt="{{ movie_details.data.movie.title }}">
+    
+    </div>
+    <div>
+        <h1 class="text-green-500 text-2xl text-center">{{ movie_details.data.movie.title }}</h1>
+        <p>{{ movie_details.data.movie.description_full }}</p>
+        
+    </div>
+   
+    
+</div>
+
+
+{% endblock content %}
